@@ -20,7 +20,7 @@ var emojis []byte
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "List all the available git emojis",
+	Short: "List all the available git emojis.",
 	Run:   list,
 }
 

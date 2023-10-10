@@ -27,7 +27,7 @@ func search(cmd *cobra.Command, args []string) {
 		Error(cmd, args, err)
 	}
 
-	idx, err := fuzzyfinder.FindMulti(
+	_, err := fuzzyfinder.FindMulti(
 		data.GitEmojis,
 		func(i int) string {
 			return strings.Join([]string{data.GitEmojis[i].Emoji, data.GitEmojis[i].Description},
@@ -44,6 +44,4 @@ func search(cmd *cobra.Command, args []string) {
 	if err != nil {
 		Error(cmd, args, err)
 	}
-
-	fmt.Println(data.GitEmojis[idx[0]].Description)
 }

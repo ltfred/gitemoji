@@ -9,8 +9,9 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "gitemoji",
-	Short: "A git emoji client for using emojis on commit messages.",
+	Use:     "gitemoji",
+	Short:   "A git emoji client for using emojis on commit messages.",
+	Version: "v0.0.1",
 }
 
 func Execute() {
